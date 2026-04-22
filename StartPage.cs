@@ -36,8 +36,8 @@
             mati.Nimi = "Mati";
             mati.KeskmineHinne = 4.0;
 
-            Õpilane kadi = new Õpilane { Nimi = "Kadi", Klass = 11, Kool = "Kutsekeskus", KeskmineHinne = 4.1};
-            Õpilane jüri = new Õpilane { Nimi = "Jüri", Klass = 12, Kool = "Kutsekeskus", KeskmineHinne = 3.6};
+            Õpilane kadi = new Õpilane { Nimi = "Kadi", Klass = 11, Kool = "Kutsekeskus", KeskmineHinne = 4.1 };
+            Õpilane jüri = new Õpilane { Nimi = "Jüri", Klass = 12, Kool = "Kutsekeskus", KeskmineHinne = 3.6 };
 
             Õpetaja anna = new Õpetaja { Nimi = "Anna", Aine = "Python", Tunnitasu = 20, Tunnidkuus = 80 };
             Õpetaja peeter = new Õpetaja { Nimi = "Peeter", Aine = "C#", Tunnitasu = 25, Tunnidkuus = 60 };
@@ -88,5 +88,14 @@
             }
             minuKool.KuvaKõik();
         }
+        Koolihaldus minuKool = new Koolihaldus();
+
+        Õpetaja op = new Õpetaja { Nimi = "Mati", Aine = "Programmeerimine" };
+        Õpilane opilane1 = new Õpilane { Nimi = "Mari", Klass = 10, Staatus = Õppevorm.Päevane };
+
+        minuKool.LisaInimene(op);
+        minuKool.LisaInimene(opilane1);
+
+        minuKool.KuvaKõik();
     }
 }

@@ -12,3 +12,13 @@ namespace oopZymak
         AkadeemilinePuhkus
     }
 }
+public class Õpilane : Isik
+{
+    public int Klass { get; set; }
+    public Õppevorm Staatus { get; set; } // Kasutame enumi andmetüübina
+
+    public override void Kirjelda()
+    {
+        Console.WriteLine($"{Nimi} õpib {Klass}. klassis. Vorm: {Staatus}");
+    }
+}

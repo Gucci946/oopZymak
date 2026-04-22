@@ -5,7 +5,7 @@ using System.Text;
 namespace oopZymak
 {
     // Õpetaja pärib klassist Isik (koolon tähistab pärimist)
-    public class Õpetaja : Isik, ITööline
+    public class Õpetaja : Isik, ITööline, IHindaja
     {
         public string Aine { get; set; }
 
@@ -26,7 +26,7 @@ namespace oopZymak
             Console.WriteLine($"Mina olen õpetaja {Nimi} ja ma õpetan: {Aine}.");
         }
 
-        public double ArvutaPalk()
+        public virtual double ArvutaPalk()
         {
             return Tunnitasu * Tunnidkuus;
         }
